@@ -1,0 +1,28 @@
+name: Skill Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check required files
+      run: |
+        echo "Checking SKILL.md..."
+        test -f SKILL.md || { echo "Error: SKILL.md not found"; exit 1; }
+        echo "Checking README.md..."
+        test -f README.md || { echo "Error: README.md not found"; exit 1; }
+        echo "All required files present!"
+    
+    - name: Validate SKILL.md structure
+      run: |
+        echo "Validating SKILL.md has required sections..."
+        grep -q "## 核心能力" SKILL.md || { echo "Warning: 核心能力 section missing"; }
+        grep -q "## 使用方法" SKILL.md || { echo "Warning: 使用方法 section missing"; }
+        echo "Validation complete!"
