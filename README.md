@@ -1,35 +1,28 @@
-# Skill Factory
+# Skill Factory 🏭
 
-AI Agent技能工厂，快速创建和管理技能
+> AI Agent Skill 创建工具包 — CLI-first 的 Skill 开发脚手架
 
-## ✨ 特性
+[![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-green)](https://github.com/chenshuai9101/skill-factory)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-- 快速创建技能
-- 模板化生成
-- 自动化测试
-- 批量管理
+## 概述
 
-## 📦 安装
+帮助开发者快速创建符合 OpenClaw 规范的 Agent Skill。提供模板生成、结构验证、打包发布全流程支持。
 
-详见 SKILL.md 中的安装章节
+## 核心功能
 
-## 🚀 快速使用
+- **📐 模板生成** — 一键生成标准 SKILL.md + 目录结构
+- **✅ 规范验证** — 自动检查 Skill 是否符合 OpenClaw 规范
+- **📦 打包发布** — 支持 ClawHub 发布流程
+- **🔧 CLI优先** — 所有操作均可通过命令行完成
 
-详见 SKILL.md 中的快速上手章节
+## 使用方式
 
-## 🔧 兼容性
+```bash
+# 在 OpenClaw 中
+/skill skill-factory
+```
 
-| 平台 | 状态 |
-|------|------|
-| Claude Code | ✅ |
-| OpenClaw | ✅ |
-| Codex CLI | ✅ |
-| Cursor | ✅ |
+---
 
-## 📚 使用指南
-
-[详细使用指南 →](SKILL.md)
-
-## 📝 许可证
-
-MIT
+*Built with ❤️ by 牧云野 | Powered by OpenClaw*
